@@ -8,7 +8,7 @@ Targets base: `https://raw.githubusercontent.com/yangjiahao265/buggie-updates/ma
 
 Bootstrap root SHA-256: `ca727a736dca0c90862eeaf0dde78e9fba4fc7ad1385ee2b277b754cd47cc029`.
 
-The stable channel currently selects `0.2.10-101-windows-amd64`, build `0dba43e0414c`. Its archive SHA-256 is `5570b916a5dfcb874ad1bee814a0db6e54011d3a1a1ef4b36febedf1df49590a`. The previous `0.2.9-local.20261014.1-98-windows-amd64` archive remains an immutable signed target for verified recovery. A download or signature check alone does not authorize selecting an old program.
+The stable channel selects `0.2.12-103-windows-amd64`, build `0465f9c7331a`. Its archive SHA-256 is `db6e5bf38512223c28108a16fa85dc3efa55beaa109d2bcf3769628cb8767f32`. Generation 101 remains an immutable signed target for verified recovery. A download or signature check alone does not authorize selecting an old program.
 
 Generation 99 was superseded before a production installation. Generation 100 adds the Windows administrator token-owner alignment fix and passed the complete temporary SCM signed-update acceptance with race checking.
 
@@ -17,5 +17,7 @@ Generation 101 also preserves the protected machine program root when configurin
 The initial upgrade attempts were safely aborted because 32 older command receipts failed to persist. The owner explicitly accepted the possible loss of those unpersisted receipts and authorized a normal service restart. Background maintenance was drained with a temporary pause before the successful update, then normal admission was restored. A zero failure count in the new process does not prove the older receipts were recovered or their persistence defect was repaired.
 
 Installations must bootstrap the independently verified root, use HTTPS, and verify the complete signed archive. Windows service upgrades use the official administrator service-update transaction. Use the notify policy for manual installation.
+
+Generation 103 adds explicit Codex/Fork/source-folder imports with owner-controlled permissions, paginated workspace queries and bounded metadata scanning. It also adds configurable checkpoint byte ceilings, bounded recovery inspection memory, and a fix for background command receipts inheriting an expired invocation lease. Generation 102 was superseded before publication. Generation 103 passed the complete temporary SCM signed upgrade with race checking, real owner/worker startup and old/new native MCP continuity (304.680 seconds). That test used a synthetic loopback TUF origin. The installed production device acceptance is recorded separately; signing or publishing this inventory does not demonstrate an installed upgrade.
 
 The current targets, snapshot and timestamp expire 30 days after signing. Before expiry, the publisher must refresh them with the existing signing store and its monotonic version counter. Publishing renewed metadata does not install a client update. This repository has no automatic signing job.
