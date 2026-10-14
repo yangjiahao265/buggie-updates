@@ -12,7 +12,9 @@ The stable channel currently selects `0.2.10-101-windows-amd64`, build `0dba43e0
 
 Generation 99 was superseded before a production installation. Generation 100 adds the Windows administrator token-owner alignment fix and passed the complete temporary SCM signed-update acceptance with race checking.
 
-Generation 101 also preserves the protected machine program root when configuring trust on an existing Windows service installation. It passed the complete temporary SCM signed upgrade and a real installed-root trust refresh without changing the root's security descriptor. The existing production device has not switched programs: the official upgrade was safely aborted because 32 older command receipts failed to persist.
+Generation 101 also preserves the protected machine program root when configuring trust on an existing Windows service installation. It passed the complete temporary SCM signed upgrade and a real installed-root trust refresh without changing the root's security descriptor. On 2026-10-14, the production Windows device completed the official HTTPS signed service update to generation 101. Workspace search, all five sort fields in both directions, pagination, successful-open access counts, restart persistence and a temporary 129th registration passed live acceptance. The original 128 registrations and stable bootstrap were preserved.
+
+The initial upgrade attempts were safely aborted because 32 older command receipts failed to persist. The owner explicitly accepted the possible loss of those unpersisted receipts and authorized a normal service restart. Background maintenance was drained with a temporary pause before the successful update, then normal admission was restored. A zero failure count in the new process does not prove the older receipts were recovered or their persistence defect was repaired.
 
 Installations must bootstrap the independently verified root, use HTTPS, and verify the complete signed archive. Windows service upgrades use the official administrator service-update transaction. Use the notify policy for manual installation.
 
