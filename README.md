@@ -8,7 +8,9 @@ Targets base: `https://raw.githubusercontent.com/yangjiahao265/buggie-updates/ma
 
 Bootstrap root SHA-256: `ca727a736dca0c90862eeaf0dde78e9fba4fc7ad1385ee2b277b754cd47cc029`.
 
-The stable channel selects `0.2.13-104-windows-amd64`, build `77d478b84762`. Its archive SHA-256 is `f5fde2e5ab35c692acff41baef545397fb7bfb152d08e28f6b2a1bd1d3546c72`. Generation 103 remains an immutable signed target for verified recovery. Older distribution files retain their historical evidence and are not automatically authorized selections. A download or signature check alone does not authorize selecting an old program.
+The stable channel selects `0.2.15-107-windows-amd64`, build `d5f36336f8f4`. Its archive SHA-256 is `c5fe1e5216781f5da6ff49c5bcf1defb4519a36977d301c00d9eb342e529b5be`. Generation 104 remains an immutable signed target for verified recovery. Older distribution files retain their historical evidence and are not automatically authorized selections. A download or signature check alone does not authorize selecting an old program.
+
+Generation 107 gives the remote MCP handshake and tool catalog independent bounded read budgets. After a partial local-only discovery, it makes at most three read-only recovery attempts and notifies the same legacy Codex connection when a verified remote catalog is ready. Recovery never replays tool actions. Focused package tests, race checks and two code reviews passed. Native Codex read-only acceptance verified visibility and actual skill_search/get/read calls, including manifest digest and byte-size checks, without a model request or changes to the user's configuration and rules. Publication does not prove that an existing installation has switched versions; active execution contexts can block the administrator update transaction.
 
 Generation 99 was superseded before a production installation. Generation 100 adds the Windows administrator token-owner alignment fix and passed the complete temporary SCM signed-update acceptance with race checking.
 
